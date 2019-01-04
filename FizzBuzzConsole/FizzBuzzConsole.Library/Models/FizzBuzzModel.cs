@@ -17,11 +17,11 @@ namespace FizzBuzzConsole.Library.Models
             int i = 0;
             for(i = 0; FBCount < 5; i += 1)
             {
-                if i % FB == 0 {
+                if (i % FB == 0) {
                     FBCount += 1;
-                } else if i % F == 0 {
+                } else if (i % F == 0) {
                     FCount += 1;
-                } else if i % B == 0 {
+                } else if (i % B == 0) {
                     BCount += 1;
                 } else
                 {

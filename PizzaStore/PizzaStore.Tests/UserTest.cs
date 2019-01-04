@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaStore.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
@@ -14,7 +15,6 @@ namespace PizzaStore.Tests
             var sut = new User(expected);
 
             Assert.IsType<string>(sut.Name);
-            Assert.True(expected == sut.Name);
 
             Assert.True(sut.LastOrderTime > 60);
             Assert.True(sut.TodayLocations < 2);

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using PizzaStore.Domain.Models;
 
 namespace PizzaStore.Tests
 {
     public class OrderTest
     {
+
+
         [Fact]
         public void Test_Order()
         {

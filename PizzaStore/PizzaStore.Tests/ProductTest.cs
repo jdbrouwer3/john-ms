@@ -10,7 +10,7 @@ namespace PizzaStore.Tests
         [Fact]
         public void Test_ProductToppings()
         {
-            var expected = q1
+            var expected = Toppings
             var sut = new Pizza();
 
             Assert.True(sut.Toppings.Count <= 5);

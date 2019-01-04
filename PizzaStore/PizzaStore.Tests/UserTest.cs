@@ -16,6 +16,8 @@ namespace PizzaStore.Tests
             Assert.IsType<string>(sut.Name);
             Assert.True(expected == sut.Name);
 
+            Assert.True(sut.LastOrderTime > 60);
+            Assert.True(sut.TodayLocations < 2);
         }
     }
 }

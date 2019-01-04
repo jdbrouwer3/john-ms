@@ -6,6 +6,8 @@ namespace PizzaStore.Domain.Models
 {
     public class Product
     {
+        public int Id { get; set; }
+
         public object Toppings { get; private set; }
         public object Crust { get; internal set; }
         public object Size { get; internal set; }

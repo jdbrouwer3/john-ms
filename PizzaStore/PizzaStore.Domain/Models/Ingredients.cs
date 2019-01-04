@@ -6,6 +6,8 @@ namespace PizzaStore.Domain.Models
 {
     public class Ingredients
     {
+        public int Id { get; set; }
+
         //private readonly string PanCrust { get; }
         //private readonly string ThinCrust { get; }
         //private readonly string PizzaSauce { get; }

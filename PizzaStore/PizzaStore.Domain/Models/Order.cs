@@ -6,6 +6,8 @@ namespace PizzaStore.Domain.Models
 {
     public class Order
     {
+        public int Id { get; set; }
+
         public object Ticket { get; private set; }
         public object Pizza { get; set; }
         public int Price { get; set; }

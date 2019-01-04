@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PizzaStore.Data\PizzaStore.Data.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -26,7 +26,7 @@ namespace PizzaStore.Domain.Models
         {
             double sum = 0;
 
-            foreach (var order in Order)
+            foreach (var order in Orders)
             {
                 sum += order.Total;
             }

@@ -8,12 +8,21 @@ namespace PizzaStore.Data
         public Pizza()
         {
             LocationPizza = new HashSet<LocationPizza>();
+            //PizzaTopping = new HashSet<PizzaTopping>();
         }
 
-        public long PizzaId { get; set; }
-        public DateTime ModifiedDate { get; set; }
+        public int PizzaId { get; set; }
+        public int CrustId { get; set; }
+        public int OrderId { get; set; }
+        public int SizeId { get; set; }
+        public decimal Price { get; set; }
+        public DateTime DateModified { get; set; }
         public bool? Active { get; set; }
 
+        //public virtual Crust Crust { get; set; }
+        public virtual Order Order { get; set; }
+        //public virtual Size Size { get; set; }
         public virtual ICollection<LocationPizza> LocationPizza { get; set; }
+        //public virtual ICollection<PizzaTopping> PizzaTopping { get; set; }
     }
 }

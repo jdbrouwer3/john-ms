@@ -20,6 +20,7 @@ namespace PizzaStore.Tests
             eh = new EntityHelper();
         }
 
+        //fix this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         [Fact]
         public void Test_LocationProperties()
         {
@@ -85,4 +86,3 @@ namespace PizzaStore.Tests
         }
     }
 }
-//get locations, get orders, get pizzas, get user

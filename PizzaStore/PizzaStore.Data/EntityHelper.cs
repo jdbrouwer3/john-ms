@@ -25,7 +25,7 @@ namespace PizzaStore.Data
             return ls;
         }
 
-        public List<Order> GetOrders() //grab the information from the db and give it to me in a type we understand
+        public List<d.Order> GetOrders() //grab the information from the db and give it to me in a type we understand
         {
             var os = new List<d.Order>();
 
@@ -39,7 +39,38 @@ namespace PizzaStore.Data
             }
             return os;
         }
+
+        public List<d.Pizza> GetPizzas()
+        {
+            var ps = new List<d.Pizza>();
+
+            foreach (var p in _db.Pizza.ToList())
+            {
+                ps.Add(new d.Pizza()
+                {
+                    PizzaId = p.PizzaId
+                    //add more later
+                });
+            }
+            return ps;
+        }
+
+        public List<d.User> GetUsers()
+        {
+            var us = new List<d.User>();
+
+            foreach (var u in _db.User.ToList())
+            {
+                us.Add(new d.User()
+                {
+                    UserId = u.UserId
+                    //add more later
+                });
+            }
+            return us;
+        }
     }
 }
 
-//do the same for addresses, orders, users 
+
+//add more stuff to .add(new....

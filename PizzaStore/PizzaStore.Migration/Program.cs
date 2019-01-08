@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PizzaStore.EFMigration
+namespace PizzaStore.Migration
 {
     class Program
     {

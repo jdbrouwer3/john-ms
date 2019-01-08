@@ -4,6 +4,7 @@ using System.Text;
 using Xunit;
 using d = PizzaStore.Domain.Models;
 using PizzaStore.Data;
+using System.Linq;
 
 namespace PizzaStore.Tests
 {
@@ -58,8 +59,10 @@ namespace PizzaStore.Tests
         [Fact]
         public void Test_LocationData()
         {
-            Assert.NotNull(eh.GetLocations());
-            Assert.True(eh.GetLocations().Count >= 0);
+            var actual = eh.GetLocations();
+
+            Assert.NotNull(actual);
+            Assert.True(actual.First().LocationId == 7); //where is 7 coming from????
         }
 
         [Fact]

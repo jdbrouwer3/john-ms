@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-using PizzaStore.Domain.Models;
+using d = PizzaStore.Domain.Models;
+using PizzaStore.Data;
 
 namespace PizzaStore.Tests
 {
     public class LocationTest
     {
-        public Location sut { get; private set; }
+        public d.Location sut { get; private set; }
+        public EntityHelper eh { get; set; }
 
-        public LocationTests()
+        public PizzaStoreDbContext MyProperty { get; set; }
+
+        public LocationTest()
         {
-            var sut = new Location(); 
+            sut = new d.Location();
+            eh = new EntityHelper();
         }
 
         [Fact]
@@ -45,5 +50,39 @@ namespace PizzaStore.Tests
             Assert.True(sut.Orders.Count >= 0);
             Assert.True(sut.Sales() >= 0);
         }
+
+
+
+        //january 8
+        [Fact]
+        public void Test_LocationData()
+        {
+            Assert.NotNull(eh.GetLocations());
+            Assert.True(eh.GetLocations().Count >= 0);
+        }
+
+        [Fact]
+        public void Test_OrderData()
+        {
+            Assert.NotNull(eh.GetOrders());
+            Assert.True(eh.GetOrders().Count >= 0);
+        }
+
+        [Fact]
+        public void Test_PizzaData()
+        {
+            Assert.NotNull(eh.GetPizzas());
+            Assert.True(eh.GetPizzas().Count >= 0);
+
+        }
+
+        [Fact]
+        public void Test_UserData()
+        {
+            Assert.NotNull(eh.GetUsers());
+            Assert.True(eh.GetUsers().Count >= 0);
+
+        }
     }
 }
+//get locations, get orders, get pizzas, get user

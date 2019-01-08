@@ -6,26 +6,27 @@ namespace PizzaStore.Domain.Models
 {
     public class Location
     {
-        public int Id { get; set; }
+        public int LocationId { get; set; }
+        public Address Address { get; set; }
+        public List<Order> Orders { get; set; }
+        public List<Pizza> Pizzas { get; set; }
+        public List<User> Users { get; set; }
 
-        private object expected;
-
-        public Location(object expected)
+        public Location()
         {
-            this.expected = expected;
+            Address = new Address();
+            Orders = new List<Order>();
+            Pizzas = new List<Pizza>();
+            Users = new List<User>();
         }
 
-        public int Sold { get; set; }
-        public double Profit { get; set; }
-        public string User { get; set; }
-        public string Name { get; set; }
 
-        //from fred:
+
         public double Sales()
         {
             double sum = 0;
 
-            foreach (var order in Orders)
+            foreach (var order in Order)
             {
                 sum += order.Total;
             }

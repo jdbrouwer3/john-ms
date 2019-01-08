@@ -6,17 +6,16 @@ namespace PizzaStore.Domain.Models
 {
     public class User
     {
-        public int Id { get; set; }
+        public int UserId { get; set; }
+        public Address Address { get; set; }
+        public string Name { get; set; }
+        public List<Order> Orders { get; set; }
 
-        private string expected;
-
-        public User(string expected)
+        public User()
         {
-            this.expected = expected;
+            Address = new Address;
+            Name = string.Empty;
+            Orders = new List<Order>();
         }
-
-        public object Name { get; set; }
-        public int LastOrderTime { get; set; }
-        public int TodayLocations { get; set; }
     }
 }

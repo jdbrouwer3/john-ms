@@ -6,10 +6,18 @@ namespace PizzaStore.Domain.Models
 {
     public class Order
     {
-        public int Id { get; set; }
+        public int OrderId { get; set; }
+        public DateTime Date { get; private set; }
+        public List<Pizza> Pizzas { get; set; }
+        public double Total { get; set; }
 
-        public object Ticket { get; private set; }
-        public object Pizza { get; set; }
-        public int Price { get; set; }
+        public Order()
+        {
+            Date = DateTime.Now;
+            Pizzas = new List<Pizza>();
+            Total = 0;
+        }
+
+
     }
 }

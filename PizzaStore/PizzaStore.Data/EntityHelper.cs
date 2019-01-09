@@ -69,6 +69,18 @@ namespace PizzaStore.Data
             }
             return us;
         }
+
+        public bool SetUser(d.User u)
+        {
+            var du = new User();
+
+            du.UserId = 5;
+            du.ModifiedDate = DateTime.Now.AddHours(6);
+            du.Active = true;
+
+            _db.User.Add(du);
+            return _db.SaveChanges() == 1;
+        }
     }
 }
 

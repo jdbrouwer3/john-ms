@@ -7,7 +7,7 @@ namespace PizzaStore.Data
     {
         public Order()
         {
-            Pizza = new HashSet<Pizza>();
+            LocationOrder = new HashSet<LocationOrder>();
         }
 
         public int OrderId { get; set; }

@@ -13,12 +13,11 @@ namespace PizzaStore.Tests
         [Fact]
         public void Test_Order()
         {
-            var expected = Ticket;
             var sut = new Order();
 
-            Assert.NotNull(sut.Pizza);
-            Assert.True(sut.Pizza <= Pizza.Quantity);
-            Assert.True(sut.Price < 5000);
+            Assert.IsType<DateTime>(sut.Date);
+            Assert.IsType<List<Pizza>>(sut.Pizzas);
+            Assert.IsType<double>(sut.Total);
         }
     }
 }

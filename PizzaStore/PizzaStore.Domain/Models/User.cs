@@ -13,7 +13,7 @@ namespace PizzaStore.Domain.Models
 
         public User()
         {
-            Address = new Address;
+            Address = new Address();
             Name = string.Empty;
             Orders = new List<Order>();
         }

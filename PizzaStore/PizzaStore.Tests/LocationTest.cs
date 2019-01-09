@@ -21,15 +21,14 @@ namespace PizzaStore.Tests
             eh = new EntityHelper();
         }
 
-        //fix this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
         [Fact]
         public void Test_LocationProperties()
         {
-            Assert.IsType<int>(sut.Sold);
-            Assert.True(sut.Sold >= 0);
-            Assert.IsType<double>(sut.Profit);
-            Assert.True(sut.Profit >= 0);
-            Assert.IsType<string>(sut.User);
+            Assert.IsType<Address>(sut.Address);
+            Assert.IsType<List<Order>>(sut.Orders);
+            Assert.IsType<List<Pizza>>(sut.Pizzas);
+            Assert.IsType<List<User>>(sut.Users);
         }
 
         [Fact]
@@ -46,7 +45,7 @@ namespace PizzaStore.Tests
 
         [Theory]
         [InlineData(0,0)]
-        [InlineData (10,100)]
+        [InlineData (-10,-100)]
         public void Test_LocationGetSales(int count, double sales)
         {
             Assert.True(sut.Orders.Count >= 0);
@@ -55,7 +54,7 @@ namespace PizzaStore.Tests
 
 
 
-        //january 8
+
         [Fact]
         public void Test_LocationData()
         {

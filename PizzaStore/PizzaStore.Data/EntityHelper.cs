@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using d = PizzaStore.Domain.Models;
 
-namespace PizzaStore.Data
+namespace PizzaStore.Data //take data objects and convert them to domain objects
+                            // because I dont want people to have access to my database
 {
     public class EntityHelper
     {
@@ -19,7 +20,7 @@ namespace PizzaStore.Data
                 ls.Add(new d.Location()
                 {
                     LocationId = l.LocationId
-                    //add more later
+
                 });
             }
             return ls;

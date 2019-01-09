@@ -21,21 +21,67 @@ namespace PizzaStore.Tests
             eh = new EntityHelper();
         }
 
-        
-        [Fact]
-        public void Test_LocationProperties()
-        {
-            Assert.IsType<Address>(sut.Address);
-            Assert.IsType<List<Order>>(sut.Orders);
-            Assert.IsType<List<Pizza>>(sut.Pizzas);
-            Assert.IsType<List<User>>(sut.Users);
-        }
-
         [Fact]
         public void Test_LocationGetUsers()
         {
             Assert.True(sut.Users.Count >= 0);
         }
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //[Fact]
+        //public void Test_LocationProperties()
+        //{
+        //    Assert.IsType<Address>(sut.Address);
+        //    Assert.IsType<List<Order>>(sut.Orders);
+        //    Assert.IsType<List<Pizza>>(sut.Pizzas);
+        //    Assert.IsType<List<User>>(sut.Users);
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         [Fact]
         public void Test_LocationGetInventory()
@@ -55,36 +101,36 @@ namespace PizzaStore.Tests
 
 
 
-        [Fact]
-        public void Test_LocationData()
-        {
-            var actual = eh.GetLocations();
+        //[Fact]
+        //public void Test_LocationData()
+        //{
+        //    var actual = eh.GetLocations();
 
-            Assert.NotNull(actual);
-            Assert.True(actual.First().LocationId == 7); //where is 7 coming from????
-        }
+        //    Assert.NotNull(actual);
+        //    Assert.True(actual.First().LocationId == 7); //where is 7 coming from????
+        //}
 
-        [Fact]
-        public void Test_OrderData()
-        {
-            Assert.NotNull(eh.GetOrders());
-            Assert.True(eh.GetOrders().Count >= 0);
-        }
+        //[Fact]
+        //public void Test_OrderData()
+        //{
+        //    Assert.NotNull(eh.GetOrders());
+        //    Assert.True(eh.GetOrders().Count >= 0);
+        //}
 
-        [Fact]
-        public void Test_PizzaData()
-        {
-            Assert.NotNull(eh.GetPizzas());
-            Assert.True(eh.GetPizzas().Count >= 0);
+        //[Fact]
+        //public void Test_PizzaData()
+        //{
+        //    Assert.NotNull(eh.GetPizzas());
+        //    Assert.True(eh.GetPizzas().Count >= 0);
 
-        }
+        //}
 
-        [Fact]
-        public void Test_UserData()
-        {
-            Assert.NotNull(eh.GetUsers());
-            Assert.True(eh.GetUsers().Count >= 0);
+        //[Fact]
+        //public void Test_UserData()
+        //{
+        //    Assert.NotNull(eh.GetUsers());
+        //    Assert.True(eh.GetUsers().Count >= 0);
 
-        }
+        //}
     }
 }

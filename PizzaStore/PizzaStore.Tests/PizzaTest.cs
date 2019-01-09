@@ -15,10 +15,8 @@ namespace PizzaStore.Tests
         {
             var sut = new Data.Pizza();
 
-            //Assert.IsType<ECrust>(sut.Crust);
-            Assert.IsType<double>(sut.Price);
-            //Assert.IsType<ESize>(sut.Size);
-            //Assert.IsType<List<ETopping>>(sut.Toppings);
+            Assert.IsType<decimal>(sut.Price);
+
         }
     }
 }

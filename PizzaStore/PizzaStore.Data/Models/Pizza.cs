@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PizzaStore.Data
+namespace PizzaStore.Data.Models
 {
     public partial class Pizza
     {
         public Pizza()
         {
-            LocationPizza = new HashSet<LocationPizza>();
-            //PizzaTopping = new HashSet<PizzaTopping>();
+            PizzaTopping = new HashSet<PizzaTopping>();
         }
 
         public int PizzaId { get; set; }
@@ -19,10 +18,9 @@ namespace PizzaStore.Data
         public DateTime DateModified { get; set; }
         public bool? Active { get; set; }
 
-        //public virtual Crust Crust { get; set; }
+        public virtual Crust Crust { get; set; }
         public virtual Order Order { get; set; }
-        //public virtual Size Size { get; set; }
-        public virtual ICollection<LocationPizza> LocationPizza { get; set; }
-        //public virtual ICollection<PizzaTopping> PizzaTopping { get; set; }
+        public virtual Size Size { get; set; }
+        public virtual ICollection<PizzaTopping> PizzaTopping { get; set; }
     }
 }

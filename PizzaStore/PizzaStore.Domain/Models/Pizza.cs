@@ -17,9 +17,33 @@ namespace PizzaStore.Domain.Models
             var Siz = new Size();
             var Top = new Toppings();
             Price = Siz.SizePrice;
-            //Size = Siz.SizeName;
             Toppings = new List<string>();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //public void AddTopping(string Toppings)
         //{

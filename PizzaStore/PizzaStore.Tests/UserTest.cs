@@ -19,11 +19,11 @@ namespace PizzaStore.Tests
             sut = new d.User();
             eh = new EntityHelper();
         }
-        [Fact]
-        public void Test_UserName()
-        {
-            sut.Name = "John Brouwer";
-            Assert.True(eh.SetUser(sut));
-        }
+        //[Fact]
+        //public void Test_UserName()
+        //{
+        //    sut.Name = "John Brouwer";
+        //    Assert.True(eh.SetUser(sut));
+        //}
     }
 }

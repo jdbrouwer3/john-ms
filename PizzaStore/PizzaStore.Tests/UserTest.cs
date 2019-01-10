@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using PizzaStore.Data;
+using PizzaStore.Data.Models;
 
 namespace PizzaStore.Tests
 {

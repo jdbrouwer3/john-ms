@@ -13,7 +13,7 @@ namespace PizzaStore.Tests
         [Fact]
         public void Test_PizzaProperties()
         {
-            var sut = new Data.Pizza();
+            var sut = new Data.Models.Pizza();
 
             Assert.IsType<decimal>(sut.Price);
 

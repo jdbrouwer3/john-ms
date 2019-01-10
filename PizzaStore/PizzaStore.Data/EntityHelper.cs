@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaStore.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -76,7 +77,7 @@ namespace PizzaStore.Data //take data objects and convert them to domain objects
             var du = new User();
 
             du.UserId = 5;
-            du.ModifiedDate = DateTime.Now.AddHours(6);
+            du.DateModified = DateTime.Now.AddHours(6);
             du.Active = true;
 
             _db.User.Add(du);

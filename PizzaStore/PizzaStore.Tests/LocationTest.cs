@@ -5,6 +5,7 @@ using Xunit;
 using d = PizzaStore.Domain.Models;
 using PizzaStore.Data;
 using System.Linq;
+using PizzaStore.Data.Models;
 
 namespace PizzaStore.Tests
 {

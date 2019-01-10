@@ -37,5 +37,22 @@ namespace PizzaStore.Data.Helpers
 
             return users;
         }
+
+        public static bool SetLocation(pdm.Location location)
+        {
+            var dataLocation = new Location()
+            {
+                Address = new Address()
+                {
+                    City = location.Address.City,
+                    State = location.Address.State,
+                    Street = location.Address.Street
+                }
+            };
+
+            _db.Location.Add(dataLocation);
+
+            return _db.SaveChanges() == 1;
+        }
     }
 }

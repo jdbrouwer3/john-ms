@@ -1,30 +1,45 @@
-﻿using d = PizzaStore.Domain.Models;
+﻿using pd = PizzaStore.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using PizzaStore.Data;
 using PizzaStore.Data.Models;
+using PizzaStore.Data.Helpers;
 
 namespace PizzaStore.Tests
 {
     public class UserTest
     {
-        public d.User sut { get; private set; }
-        public EntityHelper eh { get; set; }
-
-        public PizzaStoreDbContext MyProperty { get; set; }
+        private readonly User sut;
 
         public UserTest()
         {
-            sut = new d.User();
-            eh = new EntityHelper();
+            sut = new User()
+            {
+                Name = "fred",
+                Address = new Address()
+                {
+                    City = "Tampa",
+                    State = "Florida",
+                    Street = "Fletcher Ave"
+                }
+            };
         }
-        //[Fact]
-        //public void Test_UserName()
-        //{
-        //    sut.Name = "John Brouwer";
-        //    Assert.True(eh.SetUser(sut));
-        //}
+        
+        [Fact]
+        public void Test_UserProperties()
+        {
+            Assert.IsType<Address>(sut.Address);
+            Assert.IsType<string>(sut.Name);
+            Assert.IsType<List<Order>>(sut.Order);
+
+        }
+
+        [Fact]
+        public void Test_SetDataUser()
+        {
+            Assert.True(UserHelper.SetUser(sut));
+        }
     }
 }

@@ -1,10 +1,17 @@
-﻿using pd = PizzaStore.Domain.Models;
-using System;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Text;
+//using Xunit;
+//using PizzaStore.Data;
+//using PizzaStore.Domain.Models;
+//using PizzaStore.Data.Models;
+//using PizzaStore.Data.Helpers;
+
 using System.Collections.Generic;
-using System.Text;
-using Xunit;
-using PizzaStore.Data;
+using System.Linq;
+using pd = PizzaStore.Data;
 using PizzaStore.Data.Models;
+using Xunit;
 using PizzaStore.Data.Helpers;
 
 namespace PizzaStore.Tests
@@ -32,14 +39,14 @@ namespace PizzaStore.Tests
         {
             Assert.IsType<Address>(sut.Address);
             Assert.IsType<string>(sut.Name);
-            Assert.IsType<List<Order>>(sut.Order);
+            //Assert.IsType<List<Order>>(sut.Order);
 
         }
 
-        [Fact]
-        public void Test_SetDataUser()
-        {
-            Assert.True(UserHelper.SetUser(sut));
-        }
+        //[Fact]
+        //public void Test_SetDataUser()
+        //{
+        //    Assert.True(UserHelper.SetUser(sut));
+        //}
     }
 }

@@ -17,5 +17,9 @@ namespace PizzaStore.Domain.Models
             Name = string.Empty;
             Orders = new List<Order>();
         }
+        public override string ToString()
+        {
+            return $"{UserId}"; 
+        }
     }
 }

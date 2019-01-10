@@ -1,7 +1,6 @@
 ﻿using PizzaStore.Data.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using pdm = PizzaStore.Domain.Models;
 
 namespace PizzaStore.Data.Helpers
@@ -10,8 +9,33 @@ namespace PizzaStore.Data.Helpers
     {
         private static PizzaStoreDbContext _db = new PizzaStoreDbContext();
 
-        public static void GetLocationSales(pdm.Location location) { }
+        public static double GetLocationSales(pdm.Location location)
+        {
+            var orders = OrderHelper.GetOrderByLocation(location);
+            var sum = 0D;
 
-        public static void GetLocationUsers(pdm.Location location) { }
+            foreach (var item in orders)
+            {
+                sum += item.Total;
+            }
+
+            return sum;
+        }
+
+        public static List<pdm.User> GetLocationUsers(pdm.Location location)
+        {
+            var dataLocation = _db.Location.Where(l => l.LocationId == location.LocationId).FirstOrDefault();
+            var users = new List<pdm.User>();
+
+            foreach (var item in dataLocation.Order.ToList())
+            {
+                users.Add(new pdm.User()
+                {
+                    UserId = item.User.UserId
+                });
+            }
+
+            return users;
+        }
     }
 }

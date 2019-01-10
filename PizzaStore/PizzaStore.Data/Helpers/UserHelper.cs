@@ -7,31 +7,20 @@ using pdm = PizzaStore.Domain.Models;
 
 namespace PizzaStore.Data.Helpers
 {
-    public class UserHelper
+    public static class UserHelper
     {
         private static PizzaStoreDbContext _db = new PizzaStoreDbContext();
 
-        public static List<Order> GetOrderByUser(pdm.User user)
+        public static List<pdm.Order> GetOrderByUser(pdm.User user)
         {
-            var orders = _db.User.Where(u => u.UserId == user.UserId).FirstOrDefault();
+            var dataUser = _db.User.Where(u => u.UserId == user.UserId).FirstOrDefault();
 
-            if (dataUser != null)
+            if (dataUser == null)
             {
-                //return dataUser.Order.ToList();
-                var orders = new List<pdm.Order>();
-
-                foreach (var item in dataUser.Order.ToList())
-                {
-                    orders.Add(new pdm.Order()
-                    {
-                        OrderId = item.OrderId
-                    });
-                }
-
-                return orders;
+                return null;
             }
 
-            return null;
+            return OrderHelper.GetOrders(dataUser.Order);
         }
     }
 }

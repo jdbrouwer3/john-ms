@@ -3,41 +3,56 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using dom = PizzaStore.Domain.Models;
+using pdm = PizzaStore.Domain.Models;
 
-namespace PizzaStore.Data.Helpers  //This neeeds to be updated to match fred's
+namespace PizzaStore.Data.Helpers 
 {
-    public class PizzaHelper
+    public static class PizzaHelper
     {
-        public static List<pdm.Pizza> GetPizzaByLocation(pdm.Location location)
-        {
-            var dataLocation = _db.Location.Where(l => l.LocationId == location.LocationId).First
-        }
-
         //access to DB
         private static PizzaStoreDbContext _db = new PizzaStoreDbContext();
 
         //get pizzas
-        public List<dom.Pizza> GetPizzasByLocation(Location location)
+        public static List<pdm.Pizza> GetPizzaByLocation(pdm.Location location)
         {
-            var pizzas = _db.LocationPizza.Where(l => l.LocationId == location.LocationId).Pizza.ToList();
-            var pi = new List<dom.Pizza>();
+            var dataLocation = _db.Location.Where(l => l.LocationId == location.LocationId).FirstOrDefault();
 
-            foreach (var item in pizzas)
+            if (dataLocation == null)
             {
-                pi.Add(new dom.Pizza()
-                {
-                    PizzaId = item.PizzaId,
-                    Price = item.Price
-                });
+                return null;
             }
 
-            return pi;
+            return GetPizzas(dataLocation.Order);
         }
 
-        public List<dom.Pizza> GetPizzasByOrder(Order order)
+        public static List<pdm.Pizza> GetPizzaByOrder(pdm.Order order)
         {
+            var dataOrder = _db.Order.Where(o => o.OrderId == order.OrderId).FirstOrDefault();
 
+            if (dataOrder == null)
+            {
+                return null;
+            }
+
+            return GetPizzas(new List<Order>() { dataOrder });
+        }
+
+        private static List<pdm.Pizza> GetPizzas(ICollection<Order> orderCollection)
+        {
+            var pizzas = new List<pdm.Pizza>();
+
+            foreach (var item in orderCollection.ToList())
+            {
+                foreach (var stuff in item.Pizza.ToList())
+                {
+                    pizzas.Add(new pdm.Pizza()
+                    {
+                        PizzaId = stuff.PizzaId
+                    });
+                }
+            }
+
+            return pizzas;
         }
     }
 }

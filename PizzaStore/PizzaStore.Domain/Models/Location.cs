@@ -11,6 +11,7 @@ namespace PizzaStore.Domain.Models
         public List<Order> Orders { get; set; }
         public List<Pizza> Pizzas { get; set; }
         public List<User> Users { get; set; }
+        public string Name { get; set; }
 
         public Location()
         {
@@ -18,6 +19,7 @@ namespace PizzaStore.Domain.Models
             Orders = new List<Order>();
             Pizzas = new List<Pizza>();
             Users = new List<User>();
+            Name = string.Empty;
         }
 
 

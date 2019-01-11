@@ -1,6 +1,14 @@
-﻿using PizzaStore.Data.Models;
+﻿//using PizzaStore.Data.Models;
+//using System.Collections.Generic;
+//using System.Linq;
+//using pdm = PizzaStore.Domain.Models;
+
+using Microsoft.EntityFrameworkCore;
+using PizzaStore.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using pdm = PizzaStore.Domain.Models;
 
 namespace PizzaStore.Data.Helpers
@@ -53,6 +61,25 @@ namespace PizzaStore.Data.Helpers
             _db.Location.Add(dataLocation);
 
             return _db.SaveChanges() == 1;
+        }
+
+
+        //Get Location -- change all users to location to make it work
+        public static List<pdm.Location> GetLocations()
+        {
+            var dl = new List<pdm.Location>();
+
+            foreach (var item in _db.Location.ToList())
+            {
+                dl.Add(new pdm.Location()
+                {
+                    LocationId = item.LocationId,
+                    Name = item.Name
+                    //and other things e.i. name
+                });
+            }
+
+            return dl;
         }
     }
 }

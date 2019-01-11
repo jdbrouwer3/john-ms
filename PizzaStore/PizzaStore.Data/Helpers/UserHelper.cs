@@ -32,7 +32,8 @@ namespace PizzaStore.Data.Helpers
             {
                 du.Add(new pdm.User()
                 {
-                    UserId = item.UserId
+                    UserId = item.UserId,
+                    Name = item.Name
                     //and other things e.i. name
                 });
             }

@@ -28,20 +28,28 @@ namespace PizzaStore.CliClient.ViewModels
             switch (SelectedSize)
             {
                 case 1:
+                    Console.WriteLine("");
                     Console.WriteLine("You selected Small.");
                     PizzaViewModel.ChooseCrust();
+                    Console.WriteLine("");
                     break;
                 case 2:
+                    Console.WriteLine("");
                     Console.WriteLine("You selected Medium.");
                     PizzaViewModel.ChooseCrust();
+                    Console.WriteLine("");
                     break;
                 case 3:
+                    Console.WriteLine("");
                     Console.WriteLine("You selected Large!");
                     PizzaViewModel.ChooseCrust();
+                    Console.WriteLine("");
                     break;
                 default:
+                    Console.WriteLine("");
                     Console.WriteLine("That's not a size. Try again.");
                     ChooseSize();
+                    Console.WriteLine("");
                     break;
             }
         }
@@ -65,16 +73,22 @@ namespace PizzaStore.CliClient.ViewModels
             switch (SelectedCrust)
             {
                 case 1:
+                    Console.WriteLine("");
                     Console.WriteLine("You selected the New Crispy Thin Crust!");
                     PizzaViewModel.ChooseCrust();
+                    Console.WriteLine("");
                     break;
                 case 2:
+                    Console.WriteLine("");
                     Console.WriteLine("You selected the Original Pan Crust!");
                     PizzaViewModel.ChooseCrust();
+                    Console.WriteLine("");
                     break;
                 default:
+                    Console.WriteLine("");
                     Console.WriteLine("We're always working on new crust ideas, but we don't have that one yet. For now you'll have to pick a different one.");
                     ChooseSize();
+                    Console.WriteLine("");
                     break;
             }
         }

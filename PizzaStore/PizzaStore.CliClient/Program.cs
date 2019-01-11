@@ -7,11 +7,14 @@ namespace PizzaStore.CliClient
     {
         static void Main(string[] args)
         {
+            UserViewModel.EnterName();
             //DisplayUsers();
-            DisplayLocations();
+            //DisplayLocations();
             //DisplayMenu();
             //MainMenu()
         }
+
+
 
         //static void DisplayUsers()
         //{
@@ -24,15 +27,15 @@ namespace PizzaStore.CliClient
         //    }
         //}
 
-        static void DisplayLocations()
-        {
-            var locations = new LocationViewModel();
+        //static void DisplayLocations()
+        //{
+        //    var locations = new LocationViewModel();
 
-            foreach (var item in locations.GetLocations())
-            {
-                Console.WriteLine(item.LocationId + " " + item.Name);
-            }
-        }
+        //    foreach (var item in locations.GetLocations())
+        //    {
+        //        Console.WriteLine(item.LocationId + " " + item.Name);
+        //    }
+        //}
 
         //private static int DisplayMenu()
         //{

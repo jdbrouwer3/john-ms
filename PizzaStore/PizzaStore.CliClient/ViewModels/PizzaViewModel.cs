@@ -75,22 +75,28 @@ namespace PizzaStore.CliClient.ViewModels
                 case 1:
                     Console.WriteLine("");
                     Console.WriteLine("You selected the New Crispy Thin Crust!");
-                    PizzaViewModel.ChooseCrust();
+                    ShowOrder();
                     Console.WriteLine("");
                     break;
                 case 2:
                     Console.WriteLine("");
                     Console.WriteLine("You selected the Original Pan Crust!");
-                    PizzaViewModel.ChooseCrust();
+                    ShowOrder();
                     Console.WriteLine("");
                     break;
                 default:
                     Console.WriteLine("");
                     Console.WriteLine("We're always working on new crust ideas, but we don't have that one yet. For now you'll have to pick a different one.");
-                    ChooseSize();
+                    ShowOrder();
                     Console.WriteLine("");
                     break;
             }
+        }
+
+        public static void ShowOrder()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Your order was successful!");
         }
     }
 }

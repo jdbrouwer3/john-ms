@@ -64,7 +64,7 @@ namespace PizzaStore.Data.Helpers
         }
 
 
-        //Get Location -- change all users to location to make it work
+        //Get Location
         public static List<pdm.Location> GetLocations()
         {
             var dl = new List<pdm.Location>();

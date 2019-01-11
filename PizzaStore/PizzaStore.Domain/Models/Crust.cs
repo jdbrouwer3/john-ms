@@ -4,11 +4,11 @@ using System.Text;
 
 namespace PizzaStore.Domain.Models
 {
-    public class Size
+    public class Crust
     {
-        public int SizeId { get; set; }
+        public int CrustId { get; set; }
 
         public string Name { get; set; }
-        public double SizePrice { get; }
+
     }
 }

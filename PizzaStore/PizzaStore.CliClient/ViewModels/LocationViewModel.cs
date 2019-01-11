@@ -28,12 +28,15 @@ namespace PizzaStore.CliClient.ViewModels
             {
                 case 4:
                     Console.WriteLine("Thank you for choosing the IQ Pizza Store");
+                    PizzaViewModel.ChooseSize();
                     break;
                 case 5:
                     Console.WriteLine("Thank you for choosing the USF Pizza Store");
+                    PizzaViewModel.ChooseSize();
                     break;
                 case 6:
-                    Console.WriteLine("Thank you for chooseing the University Pizza Store");
+                    Console.WriteLine("Thank you for choosing the University Pizza Store");
+                    PizzaViewModel.ChooseSize();
                     break;
                 default:
                     Console.WriteLine("Sorry, that location is currently unavailable. Please choose a different location.");

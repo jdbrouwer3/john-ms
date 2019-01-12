@@ -43,29 +43,33 @@ namespace PizzaStore.Data.Helpers
 
         public static bool SetUser(pdm.User user)
         {
-            var address = _db.Address.First(a => a.Street == user.Address.Street);
+            //var address = _db.Address.First(a => a.Street == user.Address.Street);
             var dataUser = new User()
             {
                 Name = user.Name,
                 //password if you have it
             };
 
-            if (address == null)
-            {
-                dataUser.Address = new Address()
-                {
-                    City = user.Address.City,
-                    State = user.Address.State,
-                    Street = user.Address.Street
-                };
-            } else
-            {
-                dataUser.AddressId = address.AddressId;
-            }
-
             _db.User.Add(dataUser);
 
-            return address == null ? _db.SaveChanges() == 2 : _db.SaveChanges() == 1;
+            return _db.SaveChanges() == 1;
+
+            //if (address == null)
+            //{
+            //    dataUser.Address = new Address()
+            //    {
+            //        City = user.Address.City,
+            //        State = user.Address.State,
+            //        Street = user.Address.Street
+            //    };
+            //} else
+            //{
+            //    dataUser.AddressId = address.AddressId;
+            //}
+
+            //_db.User.Add(dataUser);
+
+            //return address == null ? _db.SaveChanges() == 2 : _db.SaveChanges() == 1;
         }
 
         public static void SetUser2()

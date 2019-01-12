@@ -7,14 +7,22 @@ namespace PizzaStore.CliClient
     {
         static void Main(string[] args)
         {
-            UserViewModel.EnterName();
+            //UserViewModel.EnterName();
             //DisplayUsers();
             //DisplayLocations();
             //DisplayMenu();
             //MainMenu()
+            var menu = new MenuOne();
+            menu.Menu();
         }
 
 
+
+
+
+
+
+        ////////////// old stuff
 
         //static void DisplayUsers()
         //{

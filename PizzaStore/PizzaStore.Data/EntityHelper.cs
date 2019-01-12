@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text;
 using d = PizzaStore.Domain.Models;
 
-namespace PizzaStore.Data //take data objects and convert them to domain objects
-                            // because I dont want people to have access to my database
+//take data objects and convert them to domain objects
+//because I dont want people to have access to my database
+
+namespace PizzaStore.Data            
 {
     public class EntityHelper
     {
@@ -27,7 +29,7 @@ namespace PizzaStore.Data //take data objects and convert them to domain objects
             return ls;
         }
 
-        public List<d.Order> GetOrders() //grab the information from the db and give it to me in a type we understand
+        public List<d.Order> GetOrders()
         {
             var os = new List<d.Order>();
 
@@ -36,7 +38,7 @@ namespace PizzaStore.Data //take data objects and convert them to domain objects
                 os.Add(new d.Order()
                 {
                     OrderId = o.OrderId
-                    //add more later
+                   
                 });
             }
             return os;
@@ -51,7 +53,7 @@ namespace PizzaStore.Data //take data objects and convert them to domain objects
                 ps.Add(new d.Pizza()
                 {
                     PizzaId = p.PizzaId
-                    //add more later
+                   
                 });
             }
             return ps;
@@ -66,7 +68,7 @@ namespace PizzaStore.Data //take data objects and convert them to domain objects
                 us.Add(new d.User()
                 {
                     UserId = u.UserId
-                    //add more later
+                    
                 });
             }
             return us;
@@ -87,4 +89,4 @@ namespace PizzaStore.Data //take data objects and convert them to domain objects
 }
 
 
-//add more stuff to .add(new....
+

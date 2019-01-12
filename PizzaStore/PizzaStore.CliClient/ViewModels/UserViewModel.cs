@@ -14,29 +14,9 @@ namespace PizzaStore.CliClient.ViewModels
             return UserHelper.GetUsers();
         }
 
-        public static void EnterName()
+        public static bool SetUser(User user)
         {
-            var AllUsers = GetUsers();
-            Console.WriteLine("Welcome to JB's Pizza Store!");
-            Console.WriteLine("");
-            Console.WriteLine("Hello! Please type your name.");
-            var typed = Console.ReadLine();
-            var un = AllUsers.FirstOrDefault(x => x.Name == typed);
-            if (un == null)
-            {
-                Console.WriteLine("");
-                Console.WriteLine("Name is incorrect. Please type your name.");
-                EnterName();
-                Console.WriteLine("");
-            }
-            else
-            {
-                Console.WriteLine("");
-                Console.WriteLine($"Welcome {un.Name}!");
-                LocationViewModel.PrintLocations();
-                Console.WriteLine("");
-            }
-
+            return UserHelper.SetUser(user);
         }
     }
 }

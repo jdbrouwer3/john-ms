@@ -1,13 +1,4 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Text;
-//using Xunit;
-//using PizzaStore.Data;
-//using PizzaStore.Domain.Models;
-//using PizzaStore.Data.Models;
-//using PizzaStore.Data.Helpers;
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using pd = PizzaStore.Data;
 using PizzaStore.Data.Models;
@@ -39,9 +30,25 @@ namespace PizzaStore.Tests
         {
             Assert.IsType<Address>(sut.Address);
             Assert.IsType<string>(sut.Name);
-            //Assert.IsType<List<Order>>(sut.Order);
-
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //[Fact]
         //public void Test_SetDataUser()

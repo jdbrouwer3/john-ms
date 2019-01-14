@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.RazorAssemblyInfo.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.RazorTargetAssemblyInfo.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.2\Razor\Views\Index.g.cshtml.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.2\Razor\Views\Shared\Fail.g.cshtml.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.2\Razor\Views\Shared\Pass.g.cshtml.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.2\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.2\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.2\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\netcoreapp2.2\MvcWorld.Client.AssemblyInfo.cs" />
+    <Compile Include="obj\Release\netcoreapp2.2\MvcWorld.Client.RazorAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\netcoreapp2.2\MvcWorld.Client.deps.json" />
+    <Content Include="bin\Debug\netcoreapp2.2\MvcWorld.Client.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\netcoreapp2.2\MvcWorld.Client.runtimeconfig.json" />
+    <Content Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp2.2\MvcWorld.Client.dll" />
+    <None Include="bin\Debug\netcoreapp2.2\MvcWorld.Client.pdb" />
+    <None Include="bin\Debug\netcoreapp2.2\MvcWorld.Client.Views.dll" />
+    <None Include="bin\Debug\netcoreapp2.2\MvcWorld.Client.Views.pdb" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.assets.cache" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.csproj.CopyComplete" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.dll" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.pdb" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.RazorAssemblyInfo.cache" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.RazorCoreGenerate.cache" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.RazorTargetAssemblyInfo.cache" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.TagHelpers.input.cache" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.TagHelpers.output.cache" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.Views.dll" />
+    <None Include="obj\Debug\netcoreapp2.2\MvcWorld.Client.Views.pdb" />
+    <None Include="obj\MvcWorld.Client.csproj.nuget.cache" />
+    <None Include="obj\MvcWorld.Client.csproj.nuget.g.props" />
+    <None Include="obj\MvcWorld.Client.csproj.nuget.g.targets" />
+    <None Include="obj\Release\netcoreapp2.2\MvcWorld.Client.AssemblyInfoInputs.cache" />
+    <None Include="obj\Release\netcoreapp2.2\MvcWorld.Client.assets.cache" />
+    <None Include="obj\Release\netcoreapp2.2\MvcWorld.Client.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\netcoreapp2.2\MvcWorld.Client.RazorAssemblyInfo.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Release\netcoreapp2.2\" />
+  </ItemGroup>
+
+</Project>

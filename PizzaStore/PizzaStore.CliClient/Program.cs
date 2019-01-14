@@ -7,13 +7,8 @@ namespace PizzaStore.CliClient
     {
         static void Main(string[] args)
         {
-            //UserViewModel.EnterName();
-            //DisplayUsers();
-            //DisplayLocations();
-            //DisplayMenu();
-            //MainMenu()
             var menu = new MenuOne();
-            menu.Menu();
+            menu.StartMenu();
         }
 
 

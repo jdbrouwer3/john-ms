@@ -18,5 +18,14 @@ namespace PizzaStore.CliClient.ViewModels
         {
             return UserHelper.SetUser(user);
         }
+
+        public static User GetUser(string username)
+        {
+            User user = new User();
+
+            user.Name = username;
+
+            return UserHelper.GetUser(user);
+        }
     }
 }

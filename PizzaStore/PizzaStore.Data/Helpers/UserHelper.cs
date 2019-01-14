@@ -12,17 +12,29 @@ namespace PizzaStore.Data.Helpers
     {
         private static PizzaStoreDbContext _db = new PizzaStoreDbContext();
 
-        public static List<pdm.Order> GetOrderByUser(pdm.User user)
+        public static pdm.User GetUser(pdm.User user)
         {
-            var dataUser = _db.User.Where(u => u.UserId == user.UserId).FirstOrDefault();
+            var du = _db.User.Where(u => u.Name == user.Name).FirstOrDefault();
 
-            if (dataUser == null)
+            if (du == null)
             {
                 return null;
             }
 
-            return OrderHelper.GetOrders(dataUser.Order);
+            return user;
         }
+
+        //public static List<pdm.Order> GetOrderByUser(pdm.User user)
+        //{
+        //    var dataUser = _db.User.Where(u => u.UserId == user.UserId).FirstOrDefault();
+
+        //    if (dataUser == null)
+        //    {
+        //        return null;
+        //    }
+
+        //    return OrderHelper.GetOrders(dataUser.Order);
+        //}
 
         public static List<pdm.User> GetUsers()
         {

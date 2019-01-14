@@ -1,8 +1,4 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Text;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using PizzaStore.Domain.Models;
@@ -14,11 +10,38 @@ namespace PizzaStore.CliClient
 {
     public class MenuOne
     {
-        public void Menu()
+        public void StartMenu()
+        {
+            Console.WriteLine("Welcome to JB's GRAND OPENING Pizza Store! \n" +
+                "Enter 1 to Login, or 2 to Register.");
+            int SelectedStart = int.Parse(Console.ReadLine());
+            switch (SelectedStart)
+            {
+                case 1:
+                    LoginMenu();
+                    break;
+                case 2:
+                    RegisterMenu();
+                    break;
+                default:
+                    Console.WriteLine("\n Oops... that's not an option. Try again \n");
+                    StartMenu();
+                    break;
+            }
+        }
+
+        public void RegisterMenu()
+        {
+            Console.WriteLine("Create a username");
+            var CreatedName = Console.ReadLine();
+            var user = UserViewModel.GetUser(CreatedName);
+
+        }
+
+        public void LoginMenu()
         {
             var AllUsers = UserViewModel.GetUsers();
-            //var AllUsers = GetUsers();
-            Console.WriteLine("Welcome to JB's NEW Pizza Store!");
+            Console.WriteLine("Welcome back!");
             Console.WriteLine("");
             Console.WriteLine("Please type your name.");
             var typed = Console.ReadLine();
@@ -27,7 +50,7 @@ namespace PizzaStore.CliClient
             {
                 Console.WriteLine("");
                 Console.WriteLine("Name is incorrect. Please type your name.");
-                Menu();
+                LoginMenu();
                 Console.WriteLine("");
             }
             else

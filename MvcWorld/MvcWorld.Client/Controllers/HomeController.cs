@@ -20,15 +20,13 @@ namespace MvcWorld.Client.Controllers
             var i = new Invite();
 
             ViewBag.Name = "fred";
-            i.AreYouComing("fred");
+            i.AreYouComing(ViewBag.Name);
 
             if (i.Rsvp)
             {
                 return View("Pass");
             }
             return View("Fail");
-
-            return View();
         }   
     }
 }

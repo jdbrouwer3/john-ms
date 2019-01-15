@@ -11,10 +11,11 @@ namespace MvcWorld.Client.Models
 
         public string Name { get; set; }
 
-        public void AreYouComing()
+        public void AreYouComing(string name)
         {
             var r = new Random();
             Rsvp = r.Next(0, 2) == 1;
+            Name = name;
         }
     }
 }

@@ -6,10 +6,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Do you want to play a game..?</title>
+    <title></title>
 </head>
 <body>
-
+    @foreach (var item in ViewData)
+    {
+        <h1>@item.Key: @item.Value</h1>
+    }
 </body>
 </html>
 

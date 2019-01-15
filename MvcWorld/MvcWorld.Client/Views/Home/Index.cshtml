@@ -1,13 +1,16 @@
-﻿@*<!doctype html>*@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
 </head>
 <body>
     <h1>Hello Index Page</h1>
+    <h2>@ViewBag.TimeNow</h2>
+    <h3>@ViewData["CurrentTime"]</h3>
 </body>
 </html>
-
-

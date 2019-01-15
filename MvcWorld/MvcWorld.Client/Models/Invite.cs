@@ -8,7 +8,6 @@ namespace MvcWorld.Client.Models
     public class Invite
     {
         public bool Rsvp { get; set; }
-
         public string Name { get; set; }
 
         public void AreYouComing(string name)

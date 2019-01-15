@@ -8,14 +8,13 @@ using MvcWorld.Client.Models;
 namespace MvcWorld.Client.Controllers
 {
     [Route("[controller]")]
-
     public class HomeController : Controller
     {
         [HttpGet]
         public IActionResult Index()
         {
             ViewData["CurrentTime"] = DateTime.Now;
-            ViewBag.CurrentTime = DateTime.Now;
+            ViewBag.TimeNow = DateTime.Now;
 
             var i = new Invite();
 
@@ -26,7 +25,8 @@ namespace MvcWorld.Client.Controllers
             {
                 return View("Pass");
             }
+
             return View("Fail");
-        }   
+        }
     }
 }

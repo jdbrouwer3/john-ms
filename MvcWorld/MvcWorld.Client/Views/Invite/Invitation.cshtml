@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Invitation";
+}
+
+@model MvcWorld.Client.Models.Invitation
+
+@*@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+
+<h1>Party Invitation</h1>
+<h2>@DateTime.UtcNow</h2>
+
+<p>@Model.Name</p>
+<p>@Model.Message</p>
+
+
+
+<form>
+
+    @using (Html.BeginForm("post", "invite"))
+    {
+        @Html.LabelFor(m => m.Menu, "Gluten-Free")
+        @Html.RadioButtonFor(m => m.Menu, "yes")
+        @Html.ValidationMessageFor(m => m.Menu)
+
+        @Html.LabelFor(m => m.Guests)
+        @Html.TextBoxFor(m => m.Guests)
+
+        @Html.LabelFor(m => m.Rsvp)
+        @Html.CheckBoxFor(m => m.Rsvp)
+
+        <button type="submit">submit</button>
+    }
+
+
+</form>
+

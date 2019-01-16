@@ -1,13 +1,8 @@
-﻿
-@{
+﻿@model MvcWorld.Client.Models.Invitation
+
+@{ 
     ViewData["Title"] = "Invitation";
 }
-
-@model MvcWorld.Client.Models.Invitation
-
-@*@{ 
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}*@
 
 <h1>Party Invitation</h1>
 <h2>@DateTime.UtcNow</h2>
@@ -16,24 +11,21 @@
 <p>@Model.Message</p>
 
 
+@using (Html.BeginForm("post", "invite"))
+{
+    @Html.LabelFor(m => m.Menu, "Gluten-Free")
+    @Html.RadioButtonFor(m => m.Menu, "yes")
+    @Html.ValidationMessageFor(m => m.Menu)
 
-<form>
+    @Html.LabelFor(m => m.Guests)
+    @Html.TextBoxFor(m => m.Guests)
+    @Html.ValidationMessageFor(m => m.Guests)
 
-    @using (Html.BeginForm("post", "invite"))
-    {
-        @Html.LabelFor(m => m.Menu, "Gluten-Free")
-        @Html.RadioButtonFor(m => m.Menu, "yes")
-        @Html.ValidationMessageFor(m => m.Menu)
+    @Html.LabelFor(m => m.Rsvp)
+    @Html.CheckBoxFor(m => m.Rsvp)
+    @Html.ValidationMessageFor(m => m.Rsvp)
 
-        @Html.LabelFor(m => m.Guests)
-        @Html.TextBoxFor(m => m.Guests)
+    <button type="submit">Submit</button>
+}
 
-        @Html.LabelFor(m => m.Rsvp)
-        @Html.CheckBoxFor(m => m.Rsvp)
-
-        <button type="submit">submit</button>
-    }
-
-
-</form>
 

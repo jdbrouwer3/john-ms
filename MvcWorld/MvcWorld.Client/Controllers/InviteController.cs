@@ -16,8 +16,8 @@ namespace MvcWorld.Client.Controllers
         {
             var i = new Invitation()
             {
-                Name = "fred",
-                Message = "come to room 200b"
+                Name = "John",
+                Message = "Come to room 200b"
             };
 
             return View("Invitation", i);
@@ -26,8 +26,8 @@ namespace MvcWorld.Client.Controllers
         [HttpPost]
         public IActionResult Post(Invitation invite)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 if (invite.Rsvp)
                 {
                     ViewBag.Name = invite.Name;
@@ -38,9 +38,9 @@ namespace MvcWorld.Client.Controllers
                 }
 
                 return View("ShameOnYou");
-            }
+            //}
 
-            return RedirectToAction("get");
+            //return RedirectToAction("get");
         }
     }
 }

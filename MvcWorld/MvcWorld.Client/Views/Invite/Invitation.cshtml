@@ -1,11 +1,10 @@
 ﻿@model MvcWorld.Client.Models.Invitation
 
-@{ 
+@{
     ViewData["Title"] = "Invitation";
 }
 
 <h1>Party Invitation</h1>
-<h2>@DateTime.UtcNow</h2>
 
 <p>@Model.Name</p>
 <p>@Model.Message</p>
@@ -13,6 +12,10 @@
 
 @using (Html.BeginForm("post", "invite"))
 {
+    @Html.LabelFor(m => m.Name, "State your name")
+    @Html.TextBoxFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
+
     @Html.LabelFor(m => m.Menu, "Gluten-Free")
     @Html.RadioButtonFor(m => m.Menu, "yes")
     @Html.ValidationMessageFor(m => m.Menu)
@@ -26,6 +29,14 @@
     @Html.ValidationMessageFor(m => m.Rsvp)
 
     <button type="submit">Submit</button>
+}
+@*@Html.RenderPartial("DatePartial")*@
+
+@section Scripts
+    {
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
 }
 
 

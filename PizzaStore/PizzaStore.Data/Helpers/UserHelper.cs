@@ -58,8 +58,8 @@ namespace PizzaStore.Data.Helpers
             //var address = _db.Address.First(a => a.Street == user.Address.Street);
             var dataUser = new User()
             {
-                Name = user.Name,
-                //password if you have it
+                Name = user.Name
+                //,password if you have it
             };
 
             _db.User.Add(dataUser);

@@ -1,5 +1,22 @@
 ﻿@{ 
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    switch(DateTime.Now.DayOfWeek.ToString())
+    {
+        case "Monday":
+            Layout = "~/Views/Shared/_Monday.cshtml";
+            break;
+        case "Tuesday":
+            Layout = "~/Views/Shared/_Tuesday.cshtml";
+            break;
+        case "Wednesday":
+            Layout = "~/Views/Shared/_Wednesday.cshtml";
+            break;
+        default:
+            Layout = "~/Views/Shared/_DayofWeek.cshtml";
+            break;
+    }
+
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    //ViewBag.User = "John";
 }
 
 

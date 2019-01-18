@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace PizzaStore.Mvc
+namespace PizzaStore.MvcClient
 {
     public class Program
     {

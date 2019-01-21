@@ -89,21 +89,21 @@ namespace PizzaStore.CliClient
             int SelectedLocation = int.Parse(Console.ReadLine());
             switch (SelectedLocation)
             {
-                case 4:
+                case 1:
                     Console.WriteLine("");
-                    Console.WriteLine("Thank you for choosing the IQ Pizza Store!");
-                    Console.WriteLine("");
-                    ChooseSize();
-                    break;
-                case 5:
-                    Console.WriteLine("");
-                    Console.WriteLine("Thank you for choosing the USF Pizza Store!");
+                    Console.WriteLine("Thank you for choosing the Fletcher Pizza Store!");
                     Console.WriteLine("");
                     ChooseSize();
                     break;
-                case 6:
+                case 2:
                     Console.WriteLine("");
-                    Console.WriteLine("Thank you for choosing the University Pizza Store!");
+                    Console.WriteLine("Thank you for choosing the Fowler Ave Pizza Store!");
+                    Console.WriteLine("");
+                    ChooseSize();
+                    break;
+                case 3:
+                    Console.WriteLine("");
+                    Console.WriteLine("Thank you for choosing the Bruce B Downs Blvd Pizza Store!");
                     Console.WriteLine("");
                     ChooseSize();
                     break;

@@ -13,17 +13,17 @@ namespace PizzaStore.Data.Helpers
         private static PizzaStoreDbContext _db = new PizzaStoreDbContext();
 
         //get pizzas
-        public static List<pdm.Pizza> GetPizzaByLocation(pdm.Location location)
-        {
-            var dataLocation = _db.Location.Where(l => l.LocationId == location.LocationId).FirstOrDefault();
+        //public static List<pdm.Pizza> GetPizzaByLocation(pdm.Location location)
+        //{
+        //    var dataLocation = _db.Location.Where(l => l.LocationId == location.LocationId).FirstOrDefault();
 
-            if (dataLocation == null)
-            {
-                return null;
-            }
+        //    if (dataLocation == null)
+        //    {
+        //        return null;
+        //    }
 
-            return GetPizzas(dataLocation.Order);
-        }
+        //    return GetPizzas(dataLocation.Order);
+        //}
 
         public static List<pdm.Pizza> GetPizzaByOrder(pdm.Order order)
         {
@@ -41,18 +41,29 @@ namespace PizzaStore.Data.Helpers
         {
             var pizzas = new List<pdm.Pizza>();
 
-            foreach (var item in orderCollection.ToList())
+            foreach (var item in _db.Pizza.ToList())
             {
-                foreach (var stuff in item.Pizza.ToList())
+                pizzas.Add(new pdm.Pizza()
                 {
-                    pizzas.Add(new pdm.Pizza()
-                    {
-                        PizzaId = stuff.PizzaId
-                    });
-                }
+                    PizzaId = item.PizzaId,
+                    Name = item.Name
+                });
             }
 
             return pizzas;
+
+            //foreach (var item in orderCollection.ToList())
+            //{
+            //    foreach (var stuff in item.Pizza.ToList())
+            //    {
+            //        pizzas.Add(new pdm.Pizza()
+            //        {
+            //            PizzaId = stuff.PizzaId
+            //        });
+            //    }
+            //}
+
+            //return pizzas;
         }
     }
 }

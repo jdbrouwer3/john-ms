@@ -22,7 +22,6 @@ namespace PizzaStore.Data.Helpers
                 {
                     CrustId = item.CrustId,
                     Name = item.Name
-                    //and other things e.i. name
                 });
             }
 

@@ -84,16 +84,16 @@ namespace PizzaStore.Data.Helpers
             //return address == null ? _db.SaveChanges() == 2 : _db.SaveChanges() == 1;
         }
 
-        public static void SetUser2()
-        {
-            var q1 = _db.Query<User>().FromSql("exec yourStoredProcedure");
-            var q2 = from u in _db.User
-                     where u.AddressId >= 1
-                     select u;
+        //public static void SetUser2()
+        //{
+        //    var q1 = _db.Query<User>().FromSql("exec yourStoredProcedure");
+        //    var q2 = from u in _db.User
+        //             where u.AddressId >= 1
+        //             select u;
 
-            _db.Add(new User());
+        //    _db.Add(new User());
 
-            var l = q2.ToList();
-        }
+        //    var l = q2.ToList();
+        //}
     }
 }

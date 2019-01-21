@@ -9,6 +9,6 @@ namespace PizzaStore.Domain.Models
         public int SizeId { get; set; }
 
         public string Name { get; set; }
-        public double SizePrice { get; }
+        //public double SizePrice { get; }
     }
 }

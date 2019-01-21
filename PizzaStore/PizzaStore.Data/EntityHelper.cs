@@ -78,9 +78,11 @@ namespace PizzaStore.Data
         {
             var du = new User();
 
-            du.UserId = 5;
-            du.DateModified = DateTime.Now.AddHours(6);
-            du.Active = true;
+            du.Name = "Peter";
+            du.LastTime = DateTime.Now;
+            //du.UserId = 5;
+            //du.DateModified = DateTime.Now.AddHours(6);
+            //du.Active = true;
 
             _db.User.Add(du);
             return _db.SaveChanges() == 1;

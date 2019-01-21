@@ -9,16 +9,17 @@ namespace PizzaStore.Domain.Models
     public class Pizza
     {
         public int PizzaId { get; set; }
-        public double Price { get; set; }
-        public List<string> Toppings { get; set; }
+        public string Name { get; set; }
+        //public double Price { get; set; }
+        //public List<string> Toppings { get; set; }
 
-        public Pizza()
-        {
-            var Siz = new Size();
-            var Top = new Toppings();
-            Price = Siz.SizePrice;
-            Toppings = new List<string>();
-        }
+        //public Pizza()
+        //{
+        //    var Siz = new Size();
+        //    var Top = new Toppings();
+        //    Price = Siz.SizePrice;
+        //    Toppings = new List<string>();
+        //}
 
 
 

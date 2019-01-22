@@ -1,0 +1,16 @@
+﻿@model PizzaStore.MvcClient.Models.OrderViewModel
+
+<h1>Start the Order</h1>
+
+@using (@Html.BeginForm("post", "OrderMenuViewModel"))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.LabelFor(m => m.Location, "Location")
+    @Html.RadioButtonFor(m => m.Location, 1)
+    @Html.RadioButtonFor(m => m.Location, 2)
+    @Html.RadioButtonFor(m => m.Location, 3)
+
+}
+
+

@@ -4,6 +4,7 @@
     ViewData["Title"] = "Invitation";
 }
 
+HTML HELPERS
 <h1>Party Invitation</h1>
 
 <p>@Model.Name</p>
@@ -30,7 +31,22 @@
 
     <button type="submit">Submit</button>
 }
-@*@Html.RenderPartial("DatePartial")*@
+
+@*TAG HELPERS
+<h1>Party Invitation</h1>
+
+<p>@Model.Name</p>
+<p>@Model.Message</p>
+
+<form asp-controller="invite" method="post">
+    <label asp-for="Menu" class="pretty">Gluten-Free</label>
+    <input type="radio" asp-for="Menu" value="yes">
+    <span asp-validation-for="Menu"></span>
+
+    <button type="submit">submit</button>
+</form>*@
+
+@*@Html.Partial("DatePartial", Model.Name)*@
 
 @section Scripts
     {

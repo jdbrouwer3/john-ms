@@ -1,7 +1,9 @@
 ﻿
+@model string
+
 <h3>
     <strong>
-        @DateTime.Now.ToLongDateString()
+        @DateTime.Now.ToLongDateString() and @Model.ToUpper()
     </strong>
 </h3>
 

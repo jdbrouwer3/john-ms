@@ -27,22 +27,20 @@ namespace MvcWorld.Client.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Post(Invitation invite)
         {
-            if (ModelState.IsValid)
+
+            if (invite.Rsvp)
             {
-                if (invite.Rsvp)
-                {
-                    ViewBag.Name = invite.Name;
-                    ViewBag.Guests = invite.Guests;
-                    ViewBag.Menu = invite.Menu;
+                ViewBag.Name = invite.Name;
+                ViewBag.Guests = invite.Guests;
+                ViewBag.Menu = invite.Menu;
 
-                    return View("ThankYou");
-                }
-
-                return View("ShameOnYou");
+                return View("ThankYou");
             }
 
-            return RedirectToAction("get");
+            return View("ShameOnYou");
         }
+
+
 
     }
 }

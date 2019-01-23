@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to JB's Pizza Place</h1>
+    <p>Get started with your order!</p>
+</div>
+
+<form method="post" name="menu">
+    <p>Select a location:</p>
+    <div>
+        <input type="radio" id="Fletcher" name="Location" value="1">
+        <label for="Fletcher">Fletcher</label>
+    </div>
+    <div>
+        <input type="radio" id="Fowler Ave" name="Location" value="2">
+        <label for="Fowler Ave">Fowler Ave</label>
+    </div>
+    <div>
+        <input type="radio" id="Bruce B Downs Blvd" name="Location" value="3">
+        <label for="Bruce B Downs Blvd">Bruce B Downs Blvd</label>
+    </div>
+    <br />
+    <p>Select a Pizza Size:</p>
+    <div>
+        <input type="radio" id="Small" name="Size" value="1">
+        <label for="Small">Small</label>
+    </div>
+    <div>
+        <input type="radio" id="Medium" name="Size" value="2">
+        <label for="Medium">Medium</label>
+    </div>
+    <div>
+        <input type="radio" id="Large" name="Size" value="3">
+        <label for="Large">Large</label>
+    </div>
+    <br />
+    <p>Select a Pizza Crust:</p>
+    <div>
+        <input type="radio" id="Thin" name="Crust" value="1">
+        <label for="Thin">Thin</label>
+    </div>
+    <div>
+        <input type="radio" id="Thick" name="Crust" value="2">
+        <label for="Thick">Thick</label>
+    </div>
+    <br />
+    <p>Select a Pizza:</p>
+    <div>
+        <input type="radio" id="Cheese" name="Pizza" value="1">
+        <label for="Cheese">Cheese</label>
+    </div>
+    <div>
+        <input type="radio" id="Pepperoni" name="Pizza" value="2">
+        <label for="Pepperoni">Pepperoni</label>
+    </div>
+    <div>
+        <input type="radio" id="Meat Lovers" name="Pizza" value="3">
+        <label for="Meat Lovers">Meat Lovers</label>
+    </div>
+    <div>
+        <input type="radio" id="Supreme" name="Pizza" value="4">
+        <label for="Supreme">Supreme</label>
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>

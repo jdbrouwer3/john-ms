@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Processed";
+}
+
+<h1>Processed</h1>
+<h3>Location: @ViewBag.Location</h3>
+
+@{ 
+    
+    if(ViewBag.Location == 1)
+    {
+        <p>Flecter</p>
+    }
+    else if(ViewBag.Location == 2)
+    {
+        <p>Fowler Ave</p>
+    }
+    else if(ViewBag.Location == 3)
+    {
+        <p>Bruce B Downs Blvd</p>
+    }
+    else
+    {
+        <p>oops... something went wrong</p>
+    }
+}

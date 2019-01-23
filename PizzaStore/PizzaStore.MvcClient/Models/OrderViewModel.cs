@@ -13,5 +13,6 @@ namespace PizzaStore.MvcClient.Models
         public string Size { get; set; }
         public string Crust { get; set; }
         public string Pizza { get; set; }
+        public bool Menu { get; set; }
     }
 }

@@ -36,7 +36,6 @@ namespace PizzaStore.CliClient
             var CreatedName = Console.ReadLine();
             var user = UserViewModel.GetUser(CreatedName);
 
-            //january 17 trying to set users in DB
             if (user != null)
             {
                 Console.WriteLine("You're already a user. Please Login");
@@ -48,7 +47,6 @@ namespace PizzaStore.CliClient
                 UserViewModel.SetUser(user);
                 PrintLocations();
             }
-
         }
 
         public void LoginMenu()

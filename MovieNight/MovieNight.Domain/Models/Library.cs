@@ -11,7 +11,7 @@ namespace MovieNight.Domain.Models
         public delegate void OutOfStock(OutOfStockArgs args);
         public event OutOfStock OutOfStockNotice;
 
-        public static Dictionary<Movie, int> Content { get; set; }
+        public Dictionary<Movie, int> Content { get; set; }
         public Address Address { get; set; }
 
         public override bool IsValid()
@@ -21,7 +21,6 @@ namespace MovieNight.Domain.Models
                 Address.IsValid();
         }
 
-        //public bool Checkin //compare this///////////////////////////////////////////////////////////////
         public bool CheckIn(Movie movie)
         {
             var key = Content.Keys.FirstOrDefault(m => m.Title.ToLower() == movie.Title.ToLower());
@@ -35,8 +34,7 @@ namespace MovieNight.Domain.Models
             return true;
         }
 
-
-        public bool Checkout(string movieTitle)
+        public bool CheckOut(string movieTitle)
         {
             var key = Content.Keys.FirstOrDefault(m => m.Title.ToLower() == movieTitle.ToLower());
 

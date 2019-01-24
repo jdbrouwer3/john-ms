@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieNight.Domain", "MovieNight.Domain\MovieNight.Domain.csproj", "{B18C62F1-4F29-447E-86B8-0055480E9E1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieNight.Domain", "MovieNight.Domain\MovieNight.Domain.csproj", "{B18C62F1-4F29-447E-86B8-0055480E9E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveNight.Testing", "MoveNight.Testing\MoveNight.Testing.csproj", "{0F886197-2848-43BD-9F90-B9E50F7DA092}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B18C62F1-4F29-447E-86B8-0055480E9E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B18C62F1-4F29-447E-86B8-0055480E9E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B18C62F1-4F29-447E-86B8-0055480E9E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F886197-2848-43BD-9F90-B9E50F7DA092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F886197-2848-43BD-9F90-B9E50F7DA092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F886197-2848-43BD-9F90-B9E50F7DA092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F886197-2848-43BD-9F90-B9E50F7DA092}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

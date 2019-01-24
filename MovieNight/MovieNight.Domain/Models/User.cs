@@ -16,37 +16,33 @@ namespace MovieNight.Domain.Models
         public Address Address { get; set; }
 
         public User()
-        {
-            var lib = new Library();
-            
-            //this is like an event listener
-            lib.OutOfStockNotice += HandleOutOfStockNotice;
+        { 
+            (new Library()).OutOfStockNotice += HandleOutOfStockNotice;
+            Queue = new List<Movie>();
+            Collection = new List<Movie>();
         }
 
-        public bool ReturnMovie(Movie movie)
+        public bool ReturnMovie(Movie movie, Library lib)
         {
-            var lib = new Library();
-
             if (lib.CheckIn(movie))
             {
                 Collection.Remove(movie);
-                NextMovie();
+                NextMovie(lib);
                 return true;
             }
 
             return false;
         }
 
-        public void NextMovie()
+        public void NextMovie(Library lib) 
         {
-            var lib = new Library();
             Movie movie = null;
 
             if (Collection.Count < Membership.Level)
             {
                 foreach (var item in Queue)
                 {
-                    if (lib.Checkout(item.Title))
+                    if (lib.CheckOut(item.Title))
                     {
                         movie = item;
                         break;

@@ -26,11 +26,14 @@ from PizzaStore.Crust as t
 where Name = 'TampaStyle';
 
 --delete everything inside table
-delete from PizzaStore.Crust;
+-- delete from PizzaStore.Crust;
 
-delete t
-from PizzaStore.Crust as t
-where CrustId < 10;
+-- delete t
+-- from PizzaStore.Crust as t
+-- where CrustId < 10;
+
+
+
 
 ---------------------------------------------------------------------------------------------------------
 -- insert into PizzaStore.Address([Street], [City], [State])
@@ -57,8 +60,50 @@ where CrustId < 10;
 -- insert into PizzaStore.Location([AddressId], [Name])
 -- values(3, 'University')
 
-select LocationId, AddressId, Name
+
+
+
+
+
+select LocationId, Name
 from PizzaStore.[Location]
+
+select * from PizzaStore.[User]
+
+select * from PizzaStore.[Order]
+
+select * from PizzaStore.[Pizza]
+
+select *
+from PizzaStore.Size
+
+SELECT *
+from PizzaStore.Crust
+
+select *
+from PizzaStore.Topping
+
+delete from PizzaStore.Topping
+where Name = 'MozzCheese';
+
+select *
+from PizzaStore.[User]
+
+select * from PizzaStore.[Crust]
+
+select * from PizzaStore.[Location]
+
+select *
+from PizzaStore.Address
+
+alter table PizzaStore.[User]
+drop COLUMN AddressId
+
+
+
+
+
+
 
 -----
 -- insert into PizzaStore.[Order](LocationId, UserId, Total, DateOrdered)
@@ -107,5 +152,7 @@ values(1, 1, 1)
 -- values(1, 'Alan Jackon')
 
 select Name
-from PizzaStore.[User]
+from PizzaStore.Location
 
+insert PizzaStore.[User](AddressId, Name)
+values(2, 'John Brouwer')

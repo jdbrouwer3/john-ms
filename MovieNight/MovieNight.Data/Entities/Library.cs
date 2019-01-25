@@ -13,7 +13,7 @@ namespace MovieNight.Data.Entities
         public int LibraryId { get; set; }
         public int AddressId { get; set; }
 
-        public virtual Address1 Address { get; set; }
+        public virtual AddressLibrary Address { get; set; }
         public virtual ICollection<Content> Content { get; set; }
     }
 }

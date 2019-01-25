@@ -16,7 +16,7 @@ namespace MovieNight.Data.Entities
         }
 
         public virtual DbSet<Address> Address { get; set; }
-        public virtual DbSet<Address1> Address1 { get; set; } //////something maybe
+        public virtual DbSet<AddressLibrary> Address1 { get; set; } 
         public virtual DbSet<Collection> Collection { get; set; }
         public virtual DbSet<Content> Content { get; set; }
         public virtual DbSet<Genre> Genre { get; set; }
@@ -62,7 +62,7 @@ namespace MovieNight.Data.Entities
                     .HasMaxLength(100);
             });
 
-            modelBuilder.Entity<Address1>(entity =>
+            modelBuilder.Entity<AddressLibrary>(entity =>
             {
                 entity.HasKey(e => e.AddressId)
                     .HasName("PK_LibAddress_AddressId");

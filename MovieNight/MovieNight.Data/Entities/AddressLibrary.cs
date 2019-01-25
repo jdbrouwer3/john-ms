@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace MovieNight.Data.Entities
 {
-    public partial class Address1
+    public partial class AddressLibrary
     {
-        public Address1()
+        public AddressLibrary()
         {
             Library = new HashSet<Library>();
         }

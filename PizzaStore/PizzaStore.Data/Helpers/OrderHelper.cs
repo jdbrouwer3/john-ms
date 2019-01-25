@@ -11,6 +11,22 @@ namespace PizzaStore.Data.Helpers
     {
         private static PizzaStoreDbContext _db = new PizzaStoreDbContext();
 
+        public static bool SetOrder(pdm.Order order)
+        {
+            var dataOrder = new Order()
+            {
+                LocationId = order.LocationId,
+                UserId = order.UserId,
+                Total = 10,
+                DateOrdered = DateTime.Now,
+                Active = true
+            };
+
+            _db.Order.Add(dataOrder);
+
+            return _db.SaveChanges() == 1;
+        }
+
         //public static List<pdm.Order> GetOrderByLocation(pdm.Location location)
         //{
         //    var dataLocation = _db.Location.Where(l => l.LocationId == location.LocationId).FirstOrDefault();

@@ -7,9 +7,14 @@ using System.Linq;
 
 namespace PizzaStore.CliClient.ViewModels
 {
-    public static class UserViewModel
+    public class UserViewModel
     {
-        public static List<User> GetUsers()
+        public List<User> GetUsers()
+        {
+            return UserHelper.GetUsers();
+        }
+
+        public static List<User> GetUsers2()
         {
             return UserHelper.GetUsers();
         }
@@ -19,6 +24,7 @@ namespace PizzaStore.CliClient.ViewModels
             return UserHelper.SetUser(user);
         }
 
+        //
         public static User GetUser(string username)
         {
             User user = new User();

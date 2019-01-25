@@ -10,7 +10,7 @@ namespace PizzaStore.Domain.Models
         public int LocationId { get; set; }
         public int UserId { get; set; }
         public int PizzaId { get; set; }
-        public double Total { get; set; }
+        public decimal Total { get; set; }
         public DateTime DateOrdered { get; private set; }
         //public List<Pizza> Pizzas { get; set; }
 

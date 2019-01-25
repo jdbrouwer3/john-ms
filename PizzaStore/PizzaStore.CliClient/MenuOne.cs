@@ -10,6 +10,9 @@ namespace PizzaStore.CliClient
 {
     public class MenuOne
     {
+        public int UserId { get; set; }
+        public int LocationId { get; set; }
+
         public void StartMenu()
         {
             Console.WriteLine("Welcome to JB's GRAND OPENING Pizza Store! \n" +
@@ -45,13 +48,25 @@ namespace PizzaStore.CliClient
                 user = new User();
                 user.Name = CreatedName;
                 UserViewModel.SetUser(user);
+
+                //jan25
+                var u = new UserViewModel();
+
+                foreach (var item in u.GetUsers())
+                {
+                    if (item.Name == user.Name)
+                    {
+                        UserId = item.UserId;
+                    }
+                }
+                Console.WriteLine("You're User ID is: " + UserId);
                 PrintLocations();
             }
         }
 
         public void LoginMenu()
         {
-            var AllUsers = UserViewModel.GetUsers();
+            var AllUsers = UserViewModel.GetUsers2();
             Console.WriteLine("Welcome back!");
             Console.WriteLine("");
             Console.WriteLine("Please type your name.");
@@ -68,6 +83,19 @@ namespace PizzaStore.CliClient
             {
                 Console.WriteLine("");
                 Console.WriteLine($"Welcome {un.Name}!");
+
+                //jan25
+                var u = new UserViewModel();
+
+                foreach (var item in u.GetUsers())
+                {
+                    if (item.Name == un.Name)
+                    {
+                        UserId = item.UserId;
+                    }
+                }
+                Console.WriteLine("You're User ID is: " + UserId);
+
                 PrintLocations();
                 Console.WriteLine("");
             }
@@ -85,6 +113,10 @@ namespace PizzaStore.CliClient
             }
 
             int SelectedLocation = int.Parse(Console.ReadLine());
+
+            //jan25
+            LocationId = SelectedLocation;
+
             switch (SelectedLocation)
             {
                 case 1:
@@ -189,10 +221,17 @@ namespace PizzaStore.CliClient
             }
         }
 
-        public static void ShowOrder()
+        public void ShowOrder()
         {
             Console.WriteLine("");
             Console.WriteLine("Your order was successful!");
+
+            var order = new Order();
+            order.LocationId = LocationId;
+            order.UserId = UserId;
+            OrderViewModel.SetOrder(order);
+
+            Console.WriteLine("For your confoirmation, your Location ID is: " + LocationId + ". Your User ID is: " + UserId);
         }
     }
 }

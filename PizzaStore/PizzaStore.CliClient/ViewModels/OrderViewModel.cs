@@ -9,9 +9,9 @@ namespace PizzaStore.CliClient.ViewModels
 {
     public static class OrderViewModel
     {
-        public static bool SetOrder(User user)
+        public static bool SetOrder(Order order)
         {
-            return UserHelper.SetUser(user);
+            return OrderHelper.SetOrder(order);
         }
     }
 }

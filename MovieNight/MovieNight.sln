@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieNight.Domain", "MovieN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoveNight.Testing", "MoveNight.Testing\MoveNight.Testing.csproj", "{0F886197-2848-43BD-9F90-B9E50F7DA092}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieNight.Migration", "MovieNight.Migration\MovieNight.Migration.csproj", "{DA9A9AA2-EBCC-4E2B-A0C0-C62C2470037E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieNight.Migration", "MovieNight.Migration\MovieNight.Migration.csproj", "{DA9A9AA2-EBCC-4E2B-A0C0-C62C2470037E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieNight.Data", "MovieNight.Data\MovieNight.Data.csproj", "{7DDC23C7-E375-4C9B-8D6C-13D44D128F4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieNight.Data", "MovieNight.Data\MovieNight.Data.csproj", "{7DDC23C7-E375-4C9B-8D6C-13D44D128F4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieNight.Code", "MovieNight.Code\MovieNight.Code.csproj", "{AE634C57-0DCA-4B45-BDA2-B909010F36B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieNight.Client", "MovieNight.Client\MovieNight.Client.csproj", "{9B5AFF02-6664-49B8-A552-5A0F119F6EF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{7DDC23C7-E375-4C9B-8D6C-13D44D128F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DDC23C7-E375-4C9B-8D6C-13D44D128F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DDC23C7-E375-4C9B-8D6C-13D44D128F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE634C57-0DCA-4B45-BDA2-B909010F36B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE634C57-0DCA-4B45-BDA2-B909010F36B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE634C57-0DCA-4B45-BDA2-B909010F36B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE634C57-0DCA-4B45-BDA2-B909010F36B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5AFF02-6664-49B8-A552-5A0F119F6EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5AFF02-6664-49B8-A552-5A0F119F6EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5AFF02-6664-49B8-A552-5A0F119F6EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5AFF02-6664-49B8-A552-5A0F119F6EF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

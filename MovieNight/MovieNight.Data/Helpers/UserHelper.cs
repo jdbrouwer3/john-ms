@@ -22,10 +22,14 @@ namespace MovieNight.Data.Helpers
         {
             var userList = new List<dm.User>();
             var mapper = userMap.CreateMapper();
+            var mapper2 = DomainHelper.nameMapper.CreateMapper();
 
             foreach (var item in _db.User.ToList())
             {
-                userList.Add(mapper.Map<dm.User>(item));
+                var u = mapper.Map<dm.User>(item);
+
+                u.Name
+                userList.Add(u);
             }
 
             return userList;

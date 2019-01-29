@@ -18,7 +18,7 @@ namespace MovieNight.Data.Helpers
 
         public static MapperConfiguration nameMapper = new MapperConfiguration(mc =>
             mc.CreateMap<User, dom.Name>()
-                .ForMember(m => m.Prefix.Name, u => u.MapFrom(src => src.Prefix))
+                .ForPath(m => m.Prefix.Name, u => u.MapFrom(src => src.Prefix))
                 .ForMember(m => m.First, u => u.MapFrom(src => src.First))
                 .ForMember(m => m.Last, u => u.MapFrom(src => src.Last)));
 

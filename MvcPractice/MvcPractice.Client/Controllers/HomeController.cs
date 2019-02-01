@@ -29,6 +29,12 @@ namespace MvcPractice.Client.Controllers
         {
             if (menu.Location > 0)
             {
+                //january 31
+                ViewBag.Location = menu.Location;
+                ViewBag.Size = menu.Size;
+                ViewBag.Crust = menu.Crust;
+                ViewBag.Pizza = menu.Pizza;
+
                 return View("Processed");
             }
 

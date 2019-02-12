@@ -1,0 +1,28 @@
+﻿@model PizzaStore.MvcClient3.Models.LocationViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to JB's Pizza Palace</h1>
+    <p>Connect with JB on <a href="https://www.linkedin.com/in/john-brouwer/">LinkedIn</a>.</p>
+</div>
+
+
+@using (Html.BeginForm("Order", "Menu"))
+{
+    @Html.LabelFor(m => m.LocationId, "First, pick one of our locations:") <br />
+
+    var locations = new LocationViewModel();
+
+    foreach (var item in locations.GetLocations())
+    {
+
+        //var LocationName = item.Name;
+        TempData.Name = item.Name;
+        <a asp-controller="Location" asp-action="Pizza" name="Location" value=@item.Name>@item.Name</a> <br />
+        
+    }
+
+
+}

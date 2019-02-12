@@ -3,19 +3,20 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <UserSecretsId>9e303d84-a79f-4ec6-ba2b-81d871cec224</UserSecretsId>
   </PropertyGroup>
 
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <Folder Include="Views\Order\" />
+    <ProjectReference Include="..\PizzaStore.Data\PizzaStore.Data.csproj" />
+    <ProjectReference Include="..\PizzaStore.Domain\PizzaStore.Domain.csproj" />
   </ItemGroup>
 
 </Project>
